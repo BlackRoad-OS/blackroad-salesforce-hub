@@ -33,7 +33,7 @@
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>Client_Household__c</reportType>
+    <reportType>Client_Households</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>

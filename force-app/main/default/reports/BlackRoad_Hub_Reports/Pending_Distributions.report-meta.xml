@@ -43,7 +43,7 @@
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>Distribution_Request__c</reportType>
+    <reportType>Distribution_Requests</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>

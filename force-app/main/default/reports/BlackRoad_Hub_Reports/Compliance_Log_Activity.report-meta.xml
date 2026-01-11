@@ -30,7 +30,7 @@
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>Compliance_Log__c</reportType>
+    <reportType>Compliance_Logs</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
