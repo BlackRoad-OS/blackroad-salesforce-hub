@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#000000</headerColor>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+    </brand>
+    <description>BlackRoad OS Hub - Meta-CRM Platform</description>
+    <formFactors>
+        <formFactor>Large</formFactor>
+    </formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>BlackRoad Hub</label>
+    <navType>Standard</navType>
+    <tabs>
+        <tab>standard-home</tab>
+        <tab>Connected_CRM__c</tab>
+        <tab>CRM_Product__c</tab>
+        <tab>Client_Household__c</tab>
+        <tab>Financial_Account__c</tab>
+        <tab>Distribution_Request__c</tab>
+        <tab>Mortality_Event__c</tab>
+        <tab>Liquidity_Event__c</tab>
+        <tab>Compliance_Log__c</tab>
+    </tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>
