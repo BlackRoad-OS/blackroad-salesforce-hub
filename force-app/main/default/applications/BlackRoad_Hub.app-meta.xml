@@ -4,25 +4,23 @@
         <headerColor>#000000</headerColor>
         <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
     </brand>
-    <description>BlackRoad OS Hub - Meta-CRM Platform</description>
-    <formFactors>
-        <formFactor>Large</formFactor>
-    </formFactors>
+    <description>BlackRoad OS Hub - Financial Advisor CRM Command Center</description>
+    <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>BlackRoad Hub</label>
     <navType>Standard</navType>
-    <tabs>
-        <tab>standard-home</tab>
-        <tab>Connected_CRM__c</tab>
-        <tab>CRM_Product__c</tab>
-        <tab>Client_Household__c</tab>
-        <tab>Financial_Account__c</tab>
-        <tab>Distribution_Request__c</tab>
-        <tab>Mortality_Event__c</tab>
-        <tab>Liquidity_Event__c</tab>
-        <tab>Compliance_Log__c</tab>
-    </tabs>
+    <tabs>standard-home</tabs>
+    <tabs>Client_Household__c</tabs>
+    <tabs>Financial_Account__c</tabs>
+    <tabs>Distribution_Request__c</tabs>
+    <tabs>Mortality_Event__c</tabs>
+    <tabs>Liquidity_Event__c</tabs>
+    <tabs>Compliance_Log__c</tabs>
+    <tabs>Connected_CRM__c</tabs>
+    <tabs>CRM_Product__c</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>
