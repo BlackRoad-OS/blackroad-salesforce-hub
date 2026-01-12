@@ -4,12 +4,13 @@
 // ============================================
 
 // ----- FINANCIAL ADVISOR CRM -----
+// Note: Client_Household__c only has Name field in current deployment
 List<Client_Household__c> households = new List<Client_Household__c>();
-households.add(new Client_Household__c(Name='The Johnson Family', Household_Status__c='Active', Risk_Tolerance__c='Moderate', Total_AUM__c=1250000));
-households.add(new Client_Household__c(Name='The Martinez Family', Household_Status__c='Active', Risk_Tolerance__c='Aggressive', Total_AUM__c=3500000));
-households.add(new Client_Household__c(Name='The Thompson Trust', Household_Status__c='Active', Risk_Tolerance__c='Conservative', Total_AUM__c=8750000));
-households.add(new Client_Household__c(Name='The Williams Estate', Household_Status__c='Prospect', Risk_Tolerance__c='Moderate', Total_AUM__c=2100000));
-households.add(new Client_Household__c(Name='The Chen Family', Household_Status__c='Active', Risk_Tolerance__c='Aggressive', Total_AUM__c=5600000));
+households.add(new Client_Household__c(Name='Johnson Family - $1.25M AUM'));
+households.add(new Client_Household__c(Name='Martinez Family - $3.5M AUM'));
+households.add(new Client_Household__c(Name='Thompson Trust - $8.75M AUM'));
+households.add(new Client_Household__c(Name='Williams Estate - $2.1M AUM'));
+households.add(new Client_Household__c(Name='Park Family - $5.6M AUM'));
 insert households;
 System.debug('Created ' + households.size() + ' FA households');
 
