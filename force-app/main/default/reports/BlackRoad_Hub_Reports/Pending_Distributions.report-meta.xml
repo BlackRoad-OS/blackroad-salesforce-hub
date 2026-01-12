@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
-        <field>Distribution_Request__c$Name</field>
+        <field>Distribution_Request__c.Name</field>
     </columns>
     <columns>
-        <field>Distribution_Request__c$Household__c</field>
+        <field>Distribution_Request__c.Household__c</field>
     </columns>
     <columns>
-        <field>Distribution_Request__c$Source_Account__c</field>
+        <field>Distribution_Request__c.Source_Account__c</field>
     </columns>
     <columns>
-        <field>Distribution_Request__c$Gross_Amount__c</field>
+        <field>Distribution_Request__c.Gross_Amount__c</field>
     </columns>
     <columns>
-        <field>Distribution_Request__c$Net_Amount__c</field>
+        <field>Distribution_Request__c.Net_Amount__c</field>
     </columns>
     <columns>
-        <field>Distribution_Request__c$Delivery_Method__c</field>
+        <field>Distribution_Request__c.Delivery_Method__c</field>
     </columns>
     <columns>
-        <field>Distribution_Request__c$Urgency__c</field>
+        <field>Distribution_Request__c.Urgency__c</field>
     </columns>
     <columns>
-        <field>Distribution_Request__c$Reason__c</field>
+        <field>Distribution_Request__c.Reason__c</field>
     </columns>
     <columns>
-        <field>Distribution_Request__c$CreatedDate</field>
+        <field>Distribution_Request__c.CreatedDate</field>
     </columns>
     <description>All distribution requests with Pending status requiring action</description>
     <filter>
         <criteriaItems>
-            <column>Distribution_Request__c$Status__c</column>
+            <column>Distribution_Request__c.Status__c</column>
             <columnToColumn>false</columnToColumn>
             <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
@@ -48,10 +48,10 @@
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
-    <sortColumn>Distribution_Request__c$Urgency__c</sortColumn>
+    <sortColumn>Distribution_Request__c.Urgency__c</sortColumn>
     <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
-        <dateColumn>Distribution_Request__c$CreatedDate</dateColumn>
+        <dateColumn>Distribution_Request__c.CreatedDate</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>
     </timeFrameFilter>
 </Report>
