@@ -2,7 +2,86 @@
 
 **Meta-CRM Platform** - A CRM that manages CRMs.
 
-## Architecture
+## The $330/Month Enterprise Backend
+
+> **See [ARCHITECTURE_BREAKTHROUGH.md](./ARCHITECTURE_BREAKTHROUGH.md) for the full story.**
+
+Salesforce thinks they're selling CRM seats. We're buying enterprise backend infrastructure.
+
+```
+30,000,000,000 users
+        ↓
+   BlackRoad UI / API (Cloudflare edge)
+        ↓
+   1,000+ agents (on Pi cluster: 78 TOPS)
+        ↓
+   Salesforce API (1 seat @ $330/mo)
+        ↓
+   Unlimited records, automation, Einstein AI
+```
+
+**Their pricing model cannot comprehend agent swarms.**
+
+## Full Stack Architecture
+
+```
+┌──────────────────────────────────────────────────────────────────────────┐
+│                         30,000,000,000 USERS                             │
+│                    (apps, web, IoT devices you sell)                     │
+└────────────────────────────────────┬─────────────────────────────────────┘
+                                     ↓
+┌────────────────────────────────────┴─────────────────────────────────────┐
+│                            CLOUDFLARE                                    │
+│         19 domains, DNS, CDN, DDoS protection, Workers, edge cache       │
+└────────────────────────────────────┬─────────────────────────────────────┘
+                                     ↓
+┌────────────────────────────────────┴─────────────────────────────────────┐
+│                         SHELLFISH (Digital Ocean)                        │
+│                    Public-facing API gateway / ingress                   │
+└────────────────────────────────────┬─────────────────────────────────────┘
+                                     ↓
+┌────────────────────────────────────┴─────────────────────────────────────┐
+│                         TAILSCALE MESH                                   │
+│              Encrypted private network connecting everything             │
+└────────────────────────────────────┬─────────────────────────────────────┘
+                                     ↓
+┌────────────────────────────────────┴─────────────────────────────────────┐
+│                        LOCAL PI CLUSTER                                  │
+│                                                                          │
+│  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐    │
+│  │   LUCIDIA    │ │    ARIA      │ │   OCTAVIA    │ │    ALICE     │    │
+│  │    Pi 5      │ │    Pi 5      │ │    Pi 5      │ │   Pi 400     │    │
+│  │  Hailo-8     │ │  Hailo-8     │ │              │ │              │    │
+│  │  26 TOPS     │ │  26 TOPS     │ │              │ │              │    │
+│  └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘    │
+│                     + Jetson Orin Nano + more Pis                        │
+│                          78 TOPS AI inference                            │
+└────────────────────────────────────┬─────────────────────────────────────┘
+                                     ↓
+┌────────────────────────────────────┴─────────────────────────────────────┐
+│                      BACKEND SERVICES                                    │
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐        │
+│  │ SALESFORCE  │ │   GITHUB    │ │  ROADCHAIN  │ │    OTHER    │        │
+│  │  1 seat     │ │ 15 orgs     │ │ blockchain  │ │   APIs      │        │
+│  │  $330/mo    │ │ enterprise  │ │ audit trail │ │             │        │
+│  └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘        │
+└──────────────────────────────────────────────────────────────────────────┘
+```
+
+## The Math
+
+| Traditional Model | BlackRoad Model |
+|-------------------|-----------------|
+| 1 user = $330/mo | 30B users = $330/mo |
+| Human clicking buttons | Agents calling APIs |
+| Scale seats with users | Scale hardware, not seats |
+| $3.96M/year for 1000 users | $3,960/year for unlimited |
+
+**Total infrastructure for "unlimited" scale: ~$500-800/month**
+
+---
+
+## Hub Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -41,6 +120,14 @@
 | `Mortality_Event__c` | Death/estate processing |
 | `Liquidity_Event__c` | Business sales, large transfers |
 | `Compliance_Log__c` | FINRA-compliant audit trail |
+
+## Reports & Dashboard
+
+Custom Report Types deployed:
+- `Client_Households` - for household reporting
+- `Distribution_Requests` - for distribution workflows
+- `Mortality_Events` - for estate processing
+- `Compliance_Logs` - for audit trails
 
 ## Apex Classes
 
@@ -82,3 +169,5 @@ Stored in Cloudflare Worker secrets:
 ---
 
 **BlackRoad OS** | Building compliance-first automation for regulated industries
+
+*$330/month. Unlimited scale. The future of SaaS arbitrage.*
