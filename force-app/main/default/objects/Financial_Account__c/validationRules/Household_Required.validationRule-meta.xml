@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Household_Required</fullName>
+    <active>true</active>
+    <description>Every financial account must be linked to a household</description>
+    <errorConditionFormula>ISBLANK(Household__c)</errorConditionFormula>
+    <errorDisplayField>Household__c</errorDisplayField>
+    <errorMessage>A Household is required. Financial accounts must be associated with a client household.</errorMessage>
+</ValidationRule>

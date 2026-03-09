@@ -1,0 +1,54 @@
+Liquidity Event Planning - Confidential
+
+Dear Valued Client,
+
+We have received notification of your upcoming liquidity event. This is an exciting milestone, and our team is here to help you navigate the financial implications and optimize your outcome.
+
+EVENT DETAILS
+-------------
+Event Type: {!Liquidity_Event__c.Event_Type__c}
+Estimated Gross Proceeds: {!Liquidity_Event__c.Gross_Proceeds__c}
+Estimated Tax Liability: {!Liquidity_Event__c.Estimated_Tax__c}
+Estimated Net Proceeds: {!Liquidity_Event__c.Net_Proceeds__c}
+QSBS Eligible: {!Liquidity_Event__c.QSBS_Eligible__c}
+Current Status: {!Liquidity_Event__c.Status__c}
+
+IMMEDIATE ACTION ITEMS
+----------------------
+1. QSBS ANALYSIS (if applicable)
+   - Review stock acquisition dates and holding periods
+   - Confirm qualified small business status
+   - Calculate potential $10M+ federal tax exclusion
+
+2. TAX PLANNING STRATEGIES
+   - Charitable giving vehicles (DAF, CRT)
+   - Installment sale considerations
+   - State tax residency planning
+   - Opportunity Zone investments
+
+3. ASSET ALLOCATION
+   - Diversification strategy for concentrated position
+   - Risk management during lockup periods
+   - Liquidity planning for tax obligations
+
+4. ESTATE PLANNING
+   - Gift/estate tax implications
+   - Trust funding opportunities
+   - Generation-skipping strategies
+
+URGENT: MEETING REQUEST
+-----------------------
+Given the complexity and time-sensitivity of liquidity events, we request a meeting within 48 hours. Please contact us immediately:
+
+- Phone: (888) 555-ROAD (Priority Line)
+- Email: liquidity@blackroad.io
+- Secure Portal: portal.blackroad.io/liquidity
+
+CONFIDENTIALITY NOTICE
+----------------------
+This communication contains confidential information regarding material non-public events. Please do not forward or discuss with unauthorized parties.
+
+Your BlackRoad Advisory Team
+
+---
+Investment decisions should not be based solely on tax considerations. Consult with your tax advisor for personalized guidance.

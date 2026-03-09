@@ -1,0 +1,42 @@
+.results-section {
+    background: #f4f6f9;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.highlight-row {
+    background: #e8f4ff;
+}
+
+.savings-box {
+    background: linear-gradient(135deg, #1b5297 0%, #2e844a 100%);
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.savings-label {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.savings-value {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.badge-success {
+    background-color: #2e844a;
+    color: white;
+}
+
+.badge-danger {
+    background-color: #c23934;
+    color: white;
+}
+
+table th {
+    background: #f3f3f3;
+}

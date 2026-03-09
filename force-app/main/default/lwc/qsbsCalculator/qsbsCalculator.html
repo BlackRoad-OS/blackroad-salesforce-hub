@@ -1,0 +1,136 @@
+<template>
+    <lightning-card title="QSBS Tax Calculator" icon-name="utility:money">
+        <div class="slds-p-around_medium">
+            <p class="slds-text-body_small slds-m-bottom_medium">
+                Calculate potential tax savings under Section 1202 Qualified Small Business Stock exclusion.
+            </p>
+
+            <!-- Input Fields -->
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                    <lightning-input
+                        type="number"
+                        label="Gross Proceeds ($)"
+                        value={grossProceeds}
+                        onchange={handleGrossProceedsChange}
+                        formatter="currency"
+                        step="1000"
+                        min="0">
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                    <lightning-input
+                        type="number"
+                        label="Cost Basis ($)"
+                        value={costBasis}
+                        onchange={handleCostBasisChange}
+                        formatter="currency"
+                        step="1000"
+                        min="0">
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                    <lightning-input
+                        type="number"
+                        label="Holding Period (Years)"
+                        value={holdingYears}
+                        onchange={handleHoldingYearsChange}
+                        step="0.5"
+                        min="0"
+                        max="50">
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                    <lightning-combobox
+                        label="State"
+                        value={selectedState}
+                        options={stateOptions}
+                        onchange={handleStateChange}>
+                    </lightning-combobox>
+                </div>
+            </div>
+
+            <!-- Calculate Button -->
+            <div class="slds-m-top_medium slds-m-bottom_medium">
+                <lightning-button
+                    variant="brand"
+                    label="Calculate Tax Savings"
+                    onclick={calculateSavings}
+                    disabled={isInvalid}>
+                </lightning-button>
+            </div>
+
+            <!-- Results -->
+            <template if:true={showResults}>
+                <div class="results-section slds-m-top_medium">
+                    <h3 class="slds-text-heading_small slds-m-bottom_small">Analysis Results</h3>
+
+                    <!-- Eligibility Status -->
+                    <div class="slds-m-bottom_medium">
+                        <template if:true={isEligible}>
+                            <lightning-badge label="QSBS Eligible" class="badge-success"></lightning-badge>
+                        </template>
+                        <template if:false={isEligible}>
+                            <lightning-badge label="Not Eligible" class="badge-danger"></lightning-badge>
+                            <p class="slds-text-color_error slds-m-top_x-small">{eligibilityReason}</p>
+                        </template>
+                    </div>
+
+                    <!-- Tax Comparison Table -->
+                    <table class="slds-table slds-table_bordered">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th class="slds-text-align_right">Without QSBS</th>
+                                <th class="slds-text-align_right">With QSBS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Capital Gain</td>
+                                <td class="slds-text-align_right">{formattedGain}</td>
+                                <td class="slds-text-align_right">{formattedGain}</td>
+                            </tr>
+                            <tr>
+                                <td>Excludable Amount</td>
+                                <td class="slds-text-align_right">$0</td>
+                                <td class="slds-text-align_right">{formattedExclusion}</td>
+                            </tr>
+                            <tr>
+                                <td>Taxable Gain</td>
+                                <td class="slds-text-align_right">{formattedGain}</td>
+                                <td class="slds-text-align_right">{formattedTaxableGain}</td>
+                            </tr>
+                            <tr>
+                                <td>Federal Tax (23.8%)</td>
+                                <td class="slds-text-align_right">{formattedTaxWithout}</td>
+                                <td class="slds-text-align_right">{formattedTaxWith}</td>
+                            </tr>
+                            <tr>
+                                <td>State Tax ({selectedState})</td>
+                                <td class="slds-text-align_right">{formattedStateTaxWithout}</td>
+                                <td class="slds-text-align_right">{formattedStateTaxWith}</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>Total Tax</strong></td>
+                                <td class="slds-text-align_right"><strong>{formattedTotalTaxWithout}</strong></td>
+                                <td class="slds-text-align_right"><strong>{formattedTotalTaxWith}</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Savings Highlight -->
+                    <div class="savings-box slds-m-top_medium">
+                        <p class="savings-label">Potential Tax Savings</p>
+                        <p class="savings-value">{formattedSavings}</p>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Disclaimer -->
+            <p class="slds-text-body_small slds-text-color_weak slds-m-top_medium">
+                This calculator provides estimates only. Consult with a qualified tax advisor for actual tax planning.
+            </p>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,56 @@
+Quarterly Performance Report - {!Client_Household__c.Name}
+
+Dear Valued Client,
+
+Please find below your quarterly portfolio summary. A detailed performance report is available in your secure client portal.
+
+PORTFOLIO SUMMARY
+-----------------
+Household: {!Client_Household__c.Name}
+Current Value: {!Client_Household__c.Total_AUM__c}
+Risk Profile: {!Client_Household__c.Risk_Tolerance__c}
+Account Status: {!Client_Household__c.Household_Status__c}
+
+MARKET COMMENTARY
+-----------------
+[This section would be customized with current market insights]
+
+The markets experienced [conditions] this quarter. Key factors included:
+* Federal Reserve policy decisions
+* Corporate earnings trends
+* Global economic developments
+* Inflation and employment data
+
+YOUR PORTFOLIO HIGHLIGHTS
+-------------------------
+* Asset Allocation: Remains aligned with your {!Client_Household__c.Risk_Tolerance__c} risk profile
+* Rebalancing: [Any rebalancing activities performed]
+* Dividends/Interest: [Income received this quarter]
+* Tax-Loss Harvesting: [Any tax optimization activities]
+
+LOOKING AHEAD
+-------------
+Key dates and considerations for next quarter:
+* Required Minimum Distributions (if applicable)
+* Tax-loss harvesting opportunities before year-end
+* Annual review scheduling
+* Beneficiary designation review
+
+ACCESS YOUR FULL REPORT
+-----------------------
+Log in to your client portal for:
+- Detailed performance attribution
+- Transaction history
+- Tax documents
+- Account statements
+
+Portal: portal.blackroad.io
+Support: (888) 555-ROAD
+
+Thank you for your continued partnership.
+
+Warm regards,
+The BlackRoad Advisory Team
+
+---
+Past performance does not guarantee future results. Investment returns and principal value will fluctuate.

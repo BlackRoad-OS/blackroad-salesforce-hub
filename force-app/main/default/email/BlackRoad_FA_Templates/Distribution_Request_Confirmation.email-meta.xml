@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Confirmation email for client distribution requests</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Distribution Request Confirmation</name>
+    <style>none</style>
+    <subject>Distribution Request Confirmation - {!Distribution_Request__c.Name}</subject>
+    <type>text</type>
+</EmailTemplate>

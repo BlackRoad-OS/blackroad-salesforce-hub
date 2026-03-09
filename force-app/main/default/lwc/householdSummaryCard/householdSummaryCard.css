@@ -1,0 +1,38 @@
+.metric-card {
+    background: #f3f3f3;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.metric-label {
+    font-size: 12px;
+    color: #706e6b;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.metric-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1b5297;
+}
+
+.text-danger {
+    color: #c23934 !important;
+}
+
+.slds-badge_success {
+    background-color: #2e844a;
+    color: white;
+}
+
+.slds-badge_warning {
+    background-color: #fe9339;
+    color: white;
+}
+
+.slds-badge_inverse {
+    background-color: #706e6b;
+    color: white;
+}

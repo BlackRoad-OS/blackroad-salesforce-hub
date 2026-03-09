@@ -1,0 +1,43 @@
+Distribution Request Confirmation
+
+Dear Valued Client,
+
+This confirms that we have received your distribution request. Below are the details for your records.
+
+REQUEST DETAILS
+---------------
+Account: {!Distribution_Request__c.Name}
+Request Date: {!Distribution_Request__c.CreatedDate}
+
+PROCESSING INFORMATION
+----------------------
+Standard processing time is 3-5 business days. Funds will be sent via your preferred method on file.
+
+For wire transfers: Same-day processing available for requests received before 12:00 PM ET
+
+For ACH transfers: 2-3 business days
+
+For checks: 5-7 business days (includes mailing time)
+
+IMPORTANT TAX INFORMATION
+-------------------------
+* Distributions from retirement accounts may be subject to federal and state income tax
+* Early withdrawals (before age 59½) may incur a 10% penalty
+* Required Minimum Distributions (RMDs) must be taken by December 31st
+* A 1099-R will be issued for tax reporting purposes
+
+QUESTIONS?
+----------
+If you have any questions about this distribution or need to make changes:
+
+Phone: (888) 555-ROAD
+Email: distributions@blackroad.io
+Client Portal: portal.blackroad.io
+
+Thank you for your continued trust in BlackRoad Financial Advisory.
+
+Best regards,
+BlackRoad Operations Team
+
+---
+This confirmation is for your records. Please retain for tax purposes.

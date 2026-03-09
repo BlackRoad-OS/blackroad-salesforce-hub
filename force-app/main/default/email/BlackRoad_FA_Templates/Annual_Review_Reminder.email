@@ -1,0 +1,38 @@
+Annual Portfolio Review - {!Client_Household__c.Name}
+
+Dear Valued Client,
+
+It's time for your annual portfolio review! Regular reviews are essential to ensure your investment strategy remains aligned with your financial goals and risk tolerance.
+
+CURRENT PORTFOLIO STATUS
+------------------------
+Household: {!Client_Household__c.Name}
+Current AUM: {!Client_Household__c.Total_AUM__c}
+Risk Profile: {!Client_Household__c.Risk_Tolerance__c}
+Last Review: {!Client_Household__c.Last_Review_Date__c}
+Next Review Due: {!Client_Household__c.Next_Review_Date__c}
+
+REVIEW AGENDA
+-------------
+During our meeting, we will discuss:
+
+* Portfolio Performance - Year-over-year returns and benchmark comparisons
+* Asset Allocation - Rebalancing opportunities based on market conditions
+* Life Changes - Any updates to your financial situation or goals
+* Tax Planning - Strategies for tax-efficient investing
+* Estate Planning - Beneficiary designations and succession planning
+
+SCHEDULE YOUR REVIEW
+--------------------
+Please contact your advisory team to schedule your review meeting:
+- Phone: (888) 555-ROAD
+- Email: advisory@blackroad.io
+- Client Portal: portal.blackroad.io
+
+We recommend scheduling within the next 30 days to maintain compliance with our fiduciary standards.
+
+Best regards,
+The BlackRoad Advisory Team
+
+---
+FINRA Compliance Notice: Annual reviews are required under our fiduciary duty. This communication has been logged for regulatory purposes.

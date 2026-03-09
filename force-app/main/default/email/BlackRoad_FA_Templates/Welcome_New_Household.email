@@ -1,0 +1,32 @@
+Welcome to {!Client_Household__c.Name}
+
+Dear Valued Client,
+
+We are delighted to welcome you to our family of clients at BlackRoad Financial Advisory. Your trust in our team to help manage and grow your wealth is greatly appreciated.
+
+ACCOUNT SUMMARY
+---------------
+Household: {!Client_Household__c.Name}
+Total Assets Under Management: {!Client_Household__c.Total_AUM__c}
+Risk Profile: {!Client_Household__c.Risk_Tolerance__c}
+Annual Advisory Fee: {!Client_Household__c.Annual_Fee__c}
+
+WHAT HAPPENS NEXT
+-----------------
+1. Your dedicated advisor will contact you within 48 hours to schedule an initial planning session
+2. We will prepare a comprehensive financial analysis based on your goals
+3. You will receive access to our secure client portal for real-time portfolio monitoring
+
+IMPORTANT CONTACTS
+------------------
+Your Advisory Team: advisory@blackroad.io
+Client Services: support@blackroad.io
+Emergency Line: (888) 555-ROAD
+
+We look forward to a long and prosperous partnership.
+
+Warm regards,
+The BlackRoad Advisory Team
+
+---
+This communication is for informational purposes only and does not constitute investment advice. Past performance does not guarantee future results.

@@ -1,0 +1,63 @@
+<template>
+    <lightning-card title="Household Summary" icon-name="standard:household">
+        <div class="slds-p-around_medium">
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+            </template>
+            <template if:false={isLoading}>
+                <template if:true={household}>
+                    <!-- Status Badge -->
+                    <div class="slds-m-bottom_medium">
+                        <lightning-badge label={household.Household_Status__c} class={statusClass}></lightning-badge>
+                    </div>
+
+                    <!-- Key Metrics -->
+                    <div class="slds-grid slds-wrap slds-gutters">
+                        <!-- Total AUM -->
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="metric-card">
+                                <p class="metric-label">Total AUM</p>
+                                <p class="metric-value">{formattedAUM}</p>
+                            </div>
+                        </div>
+
+                        <!-- Annual Fee -->
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="metric-card">
+                                <p class="metric-label">Annual Fee</p>
+                                <p class="metric-value">{formattedFee}</p>
+                            </div>
+                        </div>
+
+                        <!-- Risk Tolerance -->
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="metric-card">
+                                <p class="metric-label">Risk Profile</p>
+                                <p class="metric-value">{household.Risk_Tolerance__c}</p>
+                            </div>
+                        </div>
+
+                        <!-- Next Review -->
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                            <div class="metric-card">
+                                <p class="metric-label">Next Review</p>
+                                <p class={reviewDateClass}>{formattedReviewDate}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Alert -->
+                    <template if:true={reviewOverdue}>
+                        <div class="slds-notify slds-notify_alert slds-alert_warning slds-m-top_medium" role="alert">
+                            <lightning-icon icon-name="utility:warning" alternative-text="Warning" size="small"></lightning-icon>
+                            <span class="slds-m-left_x-small">Review is overdue! Schedule immediately.</span>
+                        </div>
+                    </template>
+                </template>
+                <template if:false={household}>
+                    <p class="slds-text-color_weak">No household data available.</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

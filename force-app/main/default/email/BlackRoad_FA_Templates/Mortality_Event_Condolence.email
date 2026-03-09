@@ -1,0 +1,46 @@
+Our Deepest Condolences
+
+Dear Family Members,
+
+On behalf of the entire BlackRoad Financial Advisory team, please accept our heartfelt condolences during this difficult time. We understand that dealing with financial matters may be the last thing on your mind, but please know that we are here to support you every step of the way.
+
+ESTATE INFORMATION
+------------------
+Date of Passing: {!Mortality_Event__c.Date_of_Death__c}
+Executor/Administrator: {!Mortality_Event__c.Executor_Name__c}
+Estimated Estate Value: {!Mortality_Event__c.Total_Estate_Value__c}
+Probate Required: {!Mortality_Event__c.Probate_Required__c}
+Death Certificate Status: {!Mortality_Event__c.Death_Certificate_Received__c}
+
+OUR COMMITMENT TO YOU
+---------------------
+We will handle all financial matters with the utmost care and sensitivity. There is no rush - we will work at your pace and be available whenever you need us.
+
+WHAT WE WILL HELP WITH
+----------------------
+* Account Transfers - Retitling assets to beneficiaries or estate
+* Required Distributions - Managing IRA and retirement account RMDs
+* Tax Coordination - Working with estate attorneys and CPAs
+* Beneficiary Claims - Life insurance and annuity death benefits
+* Ongoing Management - Continued advisory services for surviving family members
+
+DOCUMENTS WE WILL NEED (when you're ready)
+------------------------------------------
+- Certified Death Certificate (multiple copies recommended)
+- Letters Testamentary or Letters of Administration
+- Trust documents (if applicable)
+- Beneficiary identification
+
+YOUR DEDICATED SUPPORT TEAM
+---------------------------
+For estate matters: estate@blackroad.io
+Direct Line: (888) 555-ROAD ext. 2
+Available: Monday-Friday, 8am-6pm (we can accommodate other times)
+
+Please do not hesitate to reach out, even if just to talk.
+
+With deepest sympathy,
+The BlackRoad Advisory Team
+
+---
+This communication has been sent with care and logged for compliance purposes.

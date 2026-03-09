@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Condolence letter and estate processing information for mortality events</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Mortality Event Condolence</name>
+    <style>none</style>
+    <subject>Our Deepest Condolences - BlackRoad Financial Advisory</subject>
+    <type>text</type>
+</EmailTemplate>
